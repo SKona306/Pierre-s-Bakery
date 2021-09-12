@@ -80,5 +80,14 @@ namespace PierresBakery.TestTools
       newPastry.DeterminePrice();
       Assert.AreEqual(7, newPastry.Price);
     }
+
+    [TestMethod]
+    public void PastryDeterminePrice_ExtremeCaseTest_Int()
+    {
+      int pastryAmount = 100;
+      Pastry newPastry = new Pastry(pastryAmount);
+      newPastry.DeterminePrice();
+      Assert.AreEqual(167, newPastry.Price);
+    }
   }
 }
