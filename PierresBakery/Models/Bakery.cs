@@ -1,3 +1,5 @@
+using System;
+
 namespace PierresBakery.Models
 {
   public class Bread
@@ -9,6 +11,21 @@ namespace PierresBakery.Models
     {
       Price = price;
       Amount = amount;
+    }
+
+    public int DeterminePrice()
+    {
+      if(Amount > 2) 
+      {
+        int remainder = Amount % 3;
+        Price = (((Amount - remainder) * 10) + (remainder * 5));
+        return Price;
+      }
+      else 
+      {
+        Price = Amount * 5;
+        return Price;
+      }
     }
   }
 
