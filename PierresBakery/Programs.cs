@@ -1,5 +1,6 @@
 using System;
 using PierresBakery.Models;
+
 namespace PierresBakery
 {
   public class Program
@@ -50,9 +51,10 @@ namespace PierresBakery
       Console.WriteLine($"The total cost for your bread is ${newBreadOrder.Price}");
       Console.WriteLine($"The total of all your goodies is ${finalCost} \n");
 
-      Console.WriteLine("If you are finished with your order enter: main");
+      Console.WriteLine("If you are finished with your order enter: finished");
       string userEndResponse = Console.ReadLine();
-      if(userEndResponse == "main")
+      string userEndResponseLower = userEndResponse.ToLower();
+      if(userEndResponseLower == "finished")
       {
         Main();
       }
