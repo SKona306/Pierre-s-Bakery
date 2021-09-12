@@ -18,7 +18,7 @@ namespace PierresBakery.Models
       if(Amount > 2) 
       {
         int remainder = Amount % 3;
-        Price = (((Amount - remainder) * 10) + (remainder * 5));
+        Price = (((Amount - remainder) / 3) * 10) + (remainder * 5);
         return Price;
       }
       else 
