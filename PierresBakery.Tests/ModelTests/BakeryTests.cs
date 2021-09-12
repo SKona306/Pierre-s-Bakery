@@ -71,5 +71,14 @@ namespace PierresBakery.TestTools
       newPastry.DeterminePrice();
       Assert.AreEqual(4, newPastry.Price);
     }
+
+    [TestMethod]
+    public void PastryDeterminePrice_SetPriceBasedOnAmountUsingDeal_Int()
+    {
+      int pastryAmount = 4;
+      Pastry newPastry = new Pastry(pastryAmount);
+      newPastry.DeterminePrice();
+      Assert.AreEqual(7, newPastry.Price);
+    }
   }
 }
