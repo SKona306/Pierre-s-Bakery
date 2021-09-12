@@ -35,6 +35,7 @@ A C# application for Pierres Bakery that can take a users order and calculate th
 2. In console enter: `cd PierresBakery`
 3. To build project in console enter: `dotnet build` 
 4. To run project in console enter: `dotnet run`
+5. To exit program press CTRL + c
 
 ## License 
 
