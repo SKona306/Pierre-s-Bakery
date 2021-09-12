@@ -19,5 +19,13 @@ namespace PierresBakery.TestTools
       Pastry newPastry = new Pastry(1);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+
+    [TestMethod]
+    public void BreadClass_SetQuantityWanted_Int()
+    {
+      int breadAmount = 3;
+      Bread newBread = new Bread(breadAmount);
+      Assert.AreEqual(3, newBread.Amount);
+    }
   }
 }
