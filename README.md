@@ -22,7 +22,7 @@ A C# application for Pierres Bakery that can take a users order and calculate th
 
 * In the command line enter: `git clone https://github.com/SKona306/Pierre-s-Bakery.git`
 
-* In command line enter: `code .`
+* Open the newly cloned project directory in code editor of choice.
 
 * To Test:
 1. `cd` to root directory
