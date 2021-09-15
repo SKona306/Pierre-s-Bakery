@@ -44,12 +44,15 @@ namespace PierresBakery
       newPastryOrder.DeterminePrice();
       Console.Clear();
 
-      int finalCost = newBreadOrder.Price + newPastryOrder.Price;
+      Order FinalOrderCost = new Order();
+      FinalOrderCost.FinalCost(newBreadOrder.Price, newPastryOrder.Price);
+      int cost = FinalOrderCost.Total;
+      Console.WriteLine(cost);
 
       Console.WriteLine($"You order contains {breadAmount} loafs of bread and {pastryAmount} of pasteries");
       Console.WriteLine($"The total cost for your pasteries is ${newPastryOrder.Price}");
       Console.WriteLine($"The total cost for your bread is ${newBreadOrder.Price}");
-      Console.WriteLine($"The total of all your goodies is ${finalCost} \n");
+      Console.WriteLine($"The total of all your goodies is ${cost} \n");
 
       Console.WriteLine("If you are finished with your order enter: finished");
       string userEndResponse = Console.ReadLine();
